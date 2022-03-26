@@ -1,10 +1,10 @@
 /* eslint-disable */
 // Challenge 1 - Get the array of products.
-import data from './data.json';
-export default data;
+import productData from './data.json';
+export default productData;
 
 // Challenge 2 - Get a list of all categories.
-export const allCategories = data.map((item) => item.category);
+export const allCategories = productData.map((item) => item.category);
 
 // Challenge 3 - Make the categories list a list of unique values.
 export const uniqueCategories = Array.from(new Set(allCategories));

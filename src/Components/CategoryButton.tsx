@@ -2,7 +2,6 @@
  * CategoryButton.tsx
  */
 import React from 'react';
-import './CategoryButton.css';
 
 export default function CategoryButton(props: { category: { name: string, count: number }, onClick: Function, selected: boolean } ) {
   const { category, onClick, selected } = props;

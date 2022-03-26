@@ -2,13 +2,12 @@
  * App.tsx
  */
 import React, { useState } from 'react';
-import './App.css';
 
-import CategoryButton from './CategoryButton/CategoryButton';
-import ProductCard from './ProductCard/ProductCard';
+import CategoryButton from './Components/CategoryButton';
+import ProductCard from './Components/ProductCard';
 
 // Challenge 7 - Import your exported data into the App component.
-import data, { uniqueCategories, categoryCount, categoryNameCount } from './data/data';
+import productData, { uniqueCategories, categoryCount, categoryNameCount } from './data/data';
 
 
 export default function App() {
@@ -26,7 +25,7 @@ export default function App() {
       </div>
       <div className='productsWrapper mx-auto mt-4 d-flex flex-row flex-wrap justify-content-evenly'>
         {/* Challenge 9 - Display the products. Challenge 10 - Add some interaction and functionality. */}
-        {data.filter( (product) => product.category === category || category === 'All')
+        {productData.filter( (product) => product.category === category || category === 'All')
         .map( (product) => (
           <ProductCard product={product} />
         ))}
