@@ -1,1 +1,1 @@
-# Assignment 1
+# [React Mock WebStore](http://nicc.io/react-webstore/)
