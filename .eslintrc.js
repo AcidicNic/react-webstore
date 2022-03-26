@@ -24,5 +24,8 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'import/extensions': 'off',
     'no-unused-vars': 'warn',
+    'react/destructuring-assignment': 'warn',
+    'jsx-a11y/no-static-element-interactions': 'warn',
+    'jsx-a11y/click-events-have-key-events': 'warn',
   }
 };
