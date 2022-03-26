@@ -1,9 +1,9 @@
 /**
  * StarRating.tsx
  */
- import React from 'react';
+import React from 'react';
 
- export default function StarRating(props: { rating: number }) {
+export default function StarRating(props: { rating: number }) {
   const { rating } = props;
 
   const fullStar = (

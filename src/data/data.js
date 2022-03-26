@@ -1,15 +1,11 @@
 /* eslint-disable */
-// Challenge 1 - Get the array of products.
 import productData from './data.json';
 export default productData;
 
-// Challenge 2 - Get a list of all categories.
 export const allCategories = productData.map((item) => item.category);
 
-// Challenge 3 - Make the categories list a list of unique values.
 export const uniqueCategories = Array.from(new Set(allCategories));
 
-// Challenge 4 - Make an Object whose keys are the names of categories and whose values are the number of times that category appears in the data.
 export const categoryCount = allCategories.reduce((countObj, category) => {
   if (countObj[category]) {
     countObj[category] += 1;
@@ -20,10 +16,11 @@ export const categoryCount = allCategories.reduce((countObj, category) => {
   return countObj;
 }, {});
 
-// Challenge 5 - Use Reduce to make an array of objects that have a name and a count.
 export const categoryNameCount = uniqueCategories.map((categoryName) => ({
   name: categoryName,
   count: categoryCount[categoryName],
 }));
 
-// Challenge 6 - Export all of the data you have collected.
+export const totalPrice = productData.reduce((totalPrice, item) => {
+  return totalPrice + parseFloat(item.price.slice(1));
+}, 0);
